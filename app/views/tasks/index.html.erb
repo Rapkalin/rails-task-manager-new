@@ -1,0 +1,9 @@
+<h1>index page</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><i class="far fa-square mx-1"></i><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "CREATE A TASK", new_task_path %>
